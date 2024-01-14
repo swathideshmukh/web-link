@@ -10,7 +10,8 @@
     <h2>Login Page</h2>
     
     <form id="loginForm">
-        <label for="question">Are u student of ISE-D? Answer this simple question to login ! :</label><br>
+        <label for="question">Are u student of ISE-D? Answer this simple question to login !</label><br>
+	<label for="question">choose the correct statement</label>
         <input type="radio" id="WE KNOW THAT" name="answer" value="WE KNOW THAT">
         <label for="WE KNOW THAT">WE KNOW THAT</label><br>
         <input type="radio" id="WE NOW THAT" name="answer" value="WE NOW THAT">
@@ -23,8 +24,9 @@
             var selectedOption = document.querySelector('input[name="answer"]:checked');
 
             if (selectedOption && selectedOption.value === "WE NOW THAT") {
-            window.location.href ="mainpage.html.html";
-            } else {
+		window.location.replace("mainpage.html");
+           
+	 } else {
                 alert("Oops, looks like u bunked veeru sir's classes:)");
             }
         }
